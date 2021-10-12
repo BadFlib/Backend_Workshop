@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVM_WPF_Parser", "MVVM_WPF_Parser\MVVM_WPF_Parser.csproj", "{11C7BAA4-309B-4E8C-9D9C-E1671057C6C1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{E28CBD8F-8A66-4AB3-B80B-0B857889D3C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Libraries", "Test_Libraries\Test_Libraries.csproj", "{FA2025BF-174C-4E32-97C1-570B7FB44AA6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11C7BAA4-309B-4E8C-9D9C-E1671057C6C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11C7BAA4-309B-4E8C-9D9C-E1671057C6C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11C7BAA4-309B-4E8C-9D9C-E1671057C6C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11C7BAA4-309B-4E8C-9D9C-E1671057C6C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA2025BF-174C-4E32-97C1-570B7FB44AA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA2025BF-174C-4E32-97C1-570B7FB44AA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA2025BF-174C-4E32-97C1-570B7FB44AA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA2025BF-174C-4E32-97C1-570B7FB44AA6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FA2025BF-174C-4E32-97C1-570B7FB44AA6} = {E28CBD8F-8A66-4AB3-B80B-0B857889D3C4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DBED1AC8-F01B-4128-A483-003795102059}
+	EndGlobalSection
+EndGlobal
