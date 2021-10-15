@@ -64,5 +64,14 @@ namespace Test_Libraries
             }
             return UniqueWords;
         }
+        static private List<string> GetListWithStatistics(Dictionary<string, int> UniqueWords)
+        {
+            var ListWithStatistics = new List<string>();
+            foreach (var key in UniqueWords.Keys)
+            {
+                ListWithStatistics.Add($"{key} - {UniqueWords[key]}");
+            }
+            return ListWithStatistics;
+        }
     }
 }
