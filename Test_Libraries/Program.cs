@@ -7,14 +7,16 @@ namespace Test_Libraries
 {
     class Program
     {
-        private const string URL = "https://simbirsoft.com";
-        private static string _words;
+
         private static readonly char[] _symbols = {',', ' ', '(', ')', '{', '}', '"', '_', '-', '!',
                 '?', '\\', '/', '<', '>', ':', ';', '\n', '\r', '\t', '0', '1', '2', '3',
                 '4', '5', '6', '7', '8', '9', '.', '\'', '[', ']', '|', '»', '«', '$', '&'};
-        private static string[] _servicePartsOfSpeech = {"без", "в", "во", "до", "за", "из", "к", "ко",
+
+        private static readonly string[] _servicePartsOfSpeech = {"без", "в", "во", "до", "за", "из", "к", "ко",
                 "на", "над", "не", "о", "об", "обо", "от", "по", "под", "при", "про", "с", "а", "аж", "да", "ж", "же", "зато", "и",
                 "или", "ибо", "кабы", "как", "ли", "ни", "но", "раз", "то", "чем", "что", "со", "для"};
+
+        private const string URL = "https://simbirsoft.com";
         static void Main(string[] args)
         {
             var text = LoadText(URL);
@@ -26,7 +28,7 @@ namespace Test_Libraries
             }
         }
 
-        static private string LoadText(string URL)
+        private static string LoadText(string URL)
         {
             var web = new HtmlWeb();
             var doc = web.Load(URL);
