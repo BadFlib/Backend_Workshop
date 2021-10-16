@@ -20,6 +20,7 @@ namespace Test_Libraries
         static void Main(string[] args)
         {
             var text = LoadText(URL);
+            //Console.WriteLine(text);
             var words = GetWordsList(text);
             var uniqueWords = CountingUniqueWords(words);
             foreach (var key in uniqueWords.Keys)
@@ -30,6 +31,15 @@ namespace Test_Libraries
 
         private static string LoadText(string URL)
         {
+            //var config = Configuration.Default.WithDefaultLoader();
+            //var document = BrowsingContext.New(config).OpenAsync(URL).Result;
+            //var scripts = document.QuerySelectorAll("script");
+            //foreach (var script in scripts)
+            //{
+            //    script.Remove();
+            //}
+            //var text = document.QuerySelector("body").TextContent;
+            //return text.ToUpper();
             var web = new HtmlWeb();
             var doc = web.Load(URL);
             var text = doc.DocumentNode.InnerText.ToUpper();

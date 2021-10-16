@@ -44,12 +44,18 @@ namespace MVVM_WPF_Parser.ViewModels
 
         #endregion
 
+        #region Команды
+
+        #region Старт
         public ICommand StartCommand { get; }
+        #endregion
+
+        #endregion
 
         private static bool CanStartCommandExecute(object p) => true;
         private void OnStartCommandExecuted(object p)
         {
-            if (!_url.Contains("http"))
+            if (_url != null && !_url.Contains("http"))
             {
                 _url = $"https://{Url}";
             }

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MVVM_WPF_Parser" 
         xmlns:vm="clr-namespace:MVVM_WPF_Parser.ViewModels"
         mc:Ignorable="d"
-        Title="BadParser" Height="450" Width="400">
+        Title="BadParser" Height="450" Width="350">
     <Window.DataContext>
         <vm:MainWindowViewModel/>
     </Window.DataContext>
@@ -24,7 +24,7 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button Content="Start"  Command="{Binding StartCommand}" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" Height="35" Width="100" AutomationProperties.AccessKey=""/>
+            <Button Grid.Column="1" Height="35" Width="100" Content="Start" IsDefault="True"  Command="{Binding StartCommand}" HorizontalAlignment="Right" VerticalAlignment="Center"/>
         </Grid>
         <ListBox ItemsSource="{Binding UniqueWordCountStatistics}">
             
