@@ -4,19 +4,20 @@ namespace MVVM_WPF_Parser.Model
 {
     class TextLoader
     {
-        private readonly HtmlWeb client;
-        private readonly string _url;
+        private readonly HtmlWeb _Client;
+        private readonly string _Url;
 
-        public TextLoader(string url)
+        public TextLoader(string Url)
         {
-            client = new HtmlWeb();
-            _url = url;
+            _Client = new HtmlWeb();
+            _Url = Url;
         }
 
         public string LoadText()
         {
-            var HtmlDocument = client.Load(_url);
-            var text = HtmlDocument.DocumentNode.InnerText.ToUpper();
+            if (_Url == null) return null;
+            var HtmlDocument = _Client.Load(_Url);
+            string text = HtmlDocument.DocumentNode.InnerText.ToUpper();
             return text;
         }
     }
