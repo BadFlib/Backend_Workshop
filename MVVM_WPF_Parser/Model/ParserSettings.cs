@@ -8,7 +8,7 @@ namespace MVVM_WPF_Parser.Model
 {
     class ParserSettings
     {
-        public readonly char[] Symbols = {',', ' ', '(', ')', '{', '}', '"', '_', '-', '!',
+        public readonly char[] Symbols = {',', ' ', '(', ')', '{', '}', '"', '_', '!',
                 '?', '\\', '/', '<', '>', ':', ';', '\n', '\r', '\t', '0', '1', '2', '3',
                 '4', '5', '6', '7', '8', '9', '.', '\'', '[', ']', '|', '»', '«', '$', '&', '*', '@'};
 
