@@ -34,7 +34,7 @@ namespace MVVM_WPF_Parser.Model
         private Dictionary<string, int> CountingUniqueWords()
         {
             List<string> Words = GetWordsList();
-            Dictionary<string, int> UniqueWords = new();
+            Dictionary<string, int> UniqueWords = new Dictionary<string, int>();
             if (Words == null) return null;
             foreach (var word in Words)
             {
@@ -51,7 +51,7 @@ namespace MVVM_WPF_Parser.Model
         }
         public List<string> GetListWithStatistics()
         {
-            List<string> ListWithStatistics = new();
+            List<string> ListWithStatistics = new List<string>();
             if (_uniqueWords == null) return null;
             foreach (var key in _uniqueWords.Keys)
             {

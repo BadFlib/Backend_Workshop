@@ -17,6 +17,8 @@ namespace MVVM_WPF_Parser.Model
         {
             if (_Url == null) return null;
             var HtmlDocument = _Client.Load(_Url);
+            var Html = HtmlDocument.DocumentNode.InnerHtml.Replace("<", " <");
+            HtmlDocument.LoadHtml(Html);
             string text = HtmlDocument.DocumentNode.InnerText.ToUpper();
             return text;
         }
