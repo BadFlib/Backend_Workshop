@@ -17,7 +17,16 @@ namespace MVVM_WPF_Parser.Model
             _text = _textLoader.LoadText();
             _uniqueWords = CountingUniqueWords();
         }
-
+        public List<string> GetListWithStatistics()
+        {
+            List<string> ListWithStatistics = new List<string>();
+            if (_uniqueWords == null) return null;
+            foreach (var key in _uniqueWords.Keys)
+            {
+                ListWithStatistics.Add($"{key} - {_uniqueWords[key]}");
+            }
+            return ListWithStatistics;
+        }
         private List<string> GetWordsList()
         {
             var Words = new List<string>();
@@ -48,16 +57,6 @@ namespace MVVM_WPF_Parser.Model
                 }
             }
             return UniqueWords;
-        }
-        public List<string> GetListWithStatistics()
-        {
-            List<string> ListWithStatistics = new List<string>();
-            if (_uniqueWords == null) return null;
-            foreach (var key in _uniqueWords.Keys)
-            {
-                ListWithStatistics.Add($"{key} - {_uniqueWords[key]}");
-            }
-            return ListWithStatistics;
         }
     }
 }
