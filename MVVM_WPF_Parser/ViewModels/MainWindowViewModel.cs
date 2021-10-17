@@ -19,6 +19,7 @@ namespace MVVM_WPF_Parser.ViewModels
 
         #region Свойства
         #region Заголовок поля ввода
+        /// <summary>Заголовок поля ввода</summary>
         public string Label
         {
             get => _label;
@@ -27,6 +28,7 @@ namespace MVVM_WPF_Parser.ViewModels
         #endregion
 
         #region Поле ввода URL
+        /// <summary>Поле ввода URL</summary>
         public string Url
         {
             get => _url;
@@ -35,6 +37,7 @@ namespace MVVM_WPF_Parser.ViewModels
         #endregion
 
         #region Статистика по количеству уникальных слов
+        /// <summary>Статистика по количеству уникальных слов</summary>
         public List<string> UniqueWordCountStatistics
         {
             get => _uniqueWordCountStatistics;
@@ -47,10 +50,8 @@ namespace MVVM_WPF_Parser.ViewModels
         #region Команды
 
         #region Старт
+        /// <summary>Запустить процесс парсинга</summary>
         public ICommand StartCommand { get; }
-        #endregion
-
-        #endregion
 
         private static bool CanStartCommandExecute(object p) => true;
         private void OnStartCommandExecuted(object p)
@@ -70,6 +71,9 @@ namespace MVVM_WPF_Parser.ViewModels
             }
             
         }
+        #endregion
+
+        #endregion
 
         public MainWindowViewModel()
         {

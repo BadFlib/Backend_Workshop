@@ -12,7 +12,9 @@ namespace MVVM_WPF_Parser.Model
             _Client = new HtmlWeb();
             _Url = Url;
         }
-
+        
+        /// <summary>Загрузка страницы сайта</summary>
+        /// <returns>Строка с текстом страницы, без тегов</returns>
         public string LoadText()
         {
             if (_Url == null) return null;
